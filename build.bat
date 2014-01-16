@@ -1,5 +1,7 @@
 set GIT_CMD=git.exe
 
+if exist "octopress" rmdir "octopress" /S /Q
+
 %GIT_CMD% clone https://github.com/sihugh/octopress
 %GIT_CMD% clone https://github.com/sihugh/darkstripes .\octopress\.themes\darkstripes
 
@@ -13,6 +15,6 @@ call bundle exec rake install['darkstripes']
 
 call bundle exec rake generate
 
-xcopy public %site_directory% /S /D
+robocopy public %site_directory% /S /D
 
 popd
