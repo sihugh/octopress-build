@@ -15,6 +15,6 @@ call bundle exec rake install['darkstripes']
 
 call bundle exec rake generate
 
-robocopy public %site_directory% /S /D
+robocopy public %site_directory% /S
 
 popd
