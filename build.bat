@@ -13,4 +13,6 @@ call bundle exec rake install['darkstripes']
 
 call bundle exec rake generate
 
+xcopy public %site_directory% /S /D
+
 popd
